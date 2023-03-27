@@ -16,11 +16,11 @@ services:
       - DEBUG='true'
       # The environment variable credentials that is needed 
       # in django settings for Postgres to work.
-      - POSTGRES_HOST=postgres
+      - POSTGRES_HOST
       - POSTGRES_NAME
       - POSTGRES_USER
-      - POSTGRES_PASSWORD=12345678
-      - POSTGRES_PORT=5432
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
     depends_on:
       - postgres
     command: /usr/local/bin/gunicorn django_basic.wsgi:application -w 2 -b :8000
@@ -36,9 +36,9 @@ services:
     environment:
       # The environment variable credentials that is needed 
       # in django settings for Postgres to work.
-      - POSTGRES_DB
+      - POSTGRES_NAME
       - POSTGRES_USER
-      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_PASSWORD
 
 volumes:
   django_basic-django:
