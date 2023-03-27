@@ -1,6 +1,8 @@
 static/
-**/pycache/
 */__pycache__/*
-.pyc
+*.pyc
 .venv
 .env
+**/.venv/*
+**/__pycache__/
+**/static/
